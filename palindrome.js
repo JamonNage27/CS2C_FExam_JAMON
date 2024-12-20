@@ -1,20 +1,12 @@
-//function isPalindrome(str) {
-  // Convert the string to lowercase for case-insensitive comparison
-  str = str.toLowerCase();
-  // Reverse the string using built-in methods
-  const reversedStr = str.split("").reverse().join("");
-  // Log original and reversed strings to the console
-  console.log("Original string:", str);
-  console.log("Reversed string:", reversedStr);
-  // Return true if they are equal, false otherwise
-  return str === reversedStr;
-}
+//palindrome.js.
+// Declare two variables containing the following words: (use prompt() function)
+let word1 = prompt("Enter the first word: RACECAR");
+let word2 = prompt("Enter the second word: RECORDER");
 
+console.log("Original word 1:", word1);
+console.log("Reversed word 1:", word1.split("").reverse().join(""));
+console.log("Original word 2:", word2);
+console.log("Reversed word 2:", word2.split("").reverse().join(""));
 
-// Example usage with test cases:
-const stringsToCheck = ["racecar", "hello", "deified", "A man, a plan, a canal: Panama"];
-
-for (const str of stringsToCheck) {
-  const result = isPalindrome(str.replace(/[^a-zA-Z]/g, '')); //Remove non-alphanumeric characters for more robust palindrome check.
-  console.log(`${str} is a palindrome: ${result}`);
-}
+console.log("Is word 1 a palindrome?", word1 === word1.split("").reverse().join(""));
+console.log("Is word 2 a palindrome?", word2 === word2.split("").reverse().join(""));
